@@ -1,0 +1,98 @@
+syntax = "proto3";
+
+option csharp_namespace = "Artemis.DynamicLighting";
+
+package dynamiclighting;
+
+// The DynamicLighting service definition
+service DynamicLighting {
+  // Sets the color of specific LEDs on a device
+  rpc SetDeviceLEDsColor (SetDeviceLEDsColorRequest) returns (SetColorResponse);
+
+  // Gets the status of all connected devices
+  rpc GetDevicesStatus (GetDevicesStatusRequest) returns (GetDevicesStatusResponse);
+}
+
+// Request message for setting color
+message SetColorRequest {
+  uint32 red = 1;     // Red component (0-255)
+  uint32 green = 2;   // Green component (0-255)
+  uint32 blue = 3;    // Blue component (0-255)
+  uint32 alpha = 4;   // Alpha component (0-255), optional, defaults to 255
+}
+
+// Request message for setting specific LEDs color
+message SetDeviceLEDsColorRequest {
+  string device_id = 1;
+  repeated LEDColorUpdate led_updates = 2;
+}
+
+// LED color update information
+message LEDColorUpdate {
+  int32 led_index = 1;
+  uint32 red = 2;     // Red component (0-255)
+  uint32 green = 3;   // Green component (0-255)
+  uint32 blue = 4;    // Blue component (0-255)
+  uint32 alpha = 5;   // Alpha component (0-255), optional, defaults to 255
+}
+
+// Response message for set color operation
+message SetColorResponse {
+  bool success = 1;
+}
+
+// Request message for getting device status
+message GetDevicesStatusRequest {
+}
+
+// Request message for getting specific device LEDs
+message GetDeviceLEDsRequest {
+  string device_id = 1;
+}
+
+// Response message for device LEDs
+message GetDeviceLEDsResponse {
+  string device_id = 1;
+  repeated LEDInfo leds = 2;
+  bool success = 3;
+}
+
+// Response message for device status
+message GetDevicesStatusResponse {
+  repeated DeviceInfo devices = 1;
+}
+
+// Device information
+message DeviceInfo {
+  string id = 1;
+  string name = 2;
+  uint32 vendor_id = 3;
+  double update_limit = 4;
+  repeated LEDInfo leds = 5;          // Individual LED information
+  string device_type = 6;             // Type of device (keyboard, mouse, headset, etc.)
+  string model = 7;                   // Device model
+  string firmware_version = 8;        // Firmware version if available
+  DeviceDimensions dimensions = 9;    // Physical dimensions of the device
+}
+
+// Individual LED information
+message LEDInfo {
+  int32 index = 1;                    // Sequential index in device LED array
+  int32 virtual_key = 2;              // The virtual key of the LED, if applicable
+  bool has_virtual_key = 3;           // Indicates if virtual_key is valid
+  LEDPosition position = 4;           // Physical position on the device
+}
+
+// LED physical position (in millimeters from device origin)
+message LEDPosition {
+  float x = 1;        // X coordinate
+  float y = 2;        // Y coordinate
+  float z = 3;        // Z coordinate (for 3D devices)
+}
+
+// Device physical dimensions
+message DeviceDimensions {
+  float width = 1;    // Device width in millimeters
+  float height = 2;   // Device height in millimeters
+  float depth = 3;    // Device depth in millimeters
+}

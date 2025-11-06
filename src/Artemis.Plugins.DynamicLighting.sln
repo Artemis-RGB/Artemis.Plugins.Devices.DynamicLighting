@@ -1,0 +1,38 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artemis.DynamicLighting", "Artemis.DynamicLighting\Artemis.DynamicLighting.csproj", "{02DFAAA3-9562-48B4-9033-9EBA162843D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGB.NET.Devices.GRPC", "RGB.NET.Devices.GRPC\RGB.NET.Devices.GRPC.csproj", "{61FF141C-A46A-45D9-9C8F-912FFFF5502E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Artemis.Plugins.Devices.DynamicLighting", "Artemis.Plugins.Devices.DynamicLighting\Artemis.Plugins.Devices.DynamicLighting.csproj", "{E09AB236-555C-4955-8EBA-15073E5D77E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02DFAAA3-9562-48B4-9033-9EBA162843D4}.Debug|x64.ActiveCfg = Debug|x64
+		{02DFAAA3-9562-48B4-9033-9EBA162843D4}.Debug|x64.Build.0 = Debug|x64
+		{02DFAAA3-9562-48B4-9033-9EBA162843D4}.Debug|x64.Deploy.0 = Debug|x64
+		{02DFAAA3-9562-48B4-9033-9EBA162843D4}.Release|x64.ActiveCfg = Release|x64
+		{02DFAAA3-9562-48B4-9033-9EBA162843D4}.Release|x64.Build.0 = Release|x64
+		{02DFAAA3-9562-48B4-9033-9EBA162843D4}.Release|x64.Deploy.0 = Release|x64
+		{61FF141C-A46A-45D9-9C8F-912FFFF5502E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{61FF141C-A46A-45D9-9C8F-912FFFF5502E}.Debug|x64.Build.0 = Debug|Any CPU
+		{61FF141C-A46A-45D9-9C8F-912FFFF5502E}.Release|x64.ActiveCfg = Release|Any CPU
+		{61FF141C-A46A-45D9-9C8F-912FFFF5502E}.Release|x64.Build.0 = Release|Any CPU
+		{E09AB236-555C-4955-8EBA-15073E5D77E7}.Debug|x64.ActiveCfg = Debug|x64
+		{E09AB236-555C-4955-8EBA-15073E5D77E7}.Debug|x64.Build.0 = Debug|x64
+		{E09AB236-555C-4955-8EBA-15073E5D77E7}.Release|x64.ActiveCfg = Release|x64
+		{E09AB236-555C-4955-8EBA-15073E5D77E7}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {017E67F5-ADA7-4CFF-A088-DACE6C5639D3}
+	EndGlobalSection
+EndGlobal

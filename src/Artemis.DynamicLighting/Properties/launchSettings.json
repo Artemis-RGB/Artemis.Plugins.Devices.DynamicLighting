@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Artemis.DynamicLighting (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Artemis.DynamicLighting (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

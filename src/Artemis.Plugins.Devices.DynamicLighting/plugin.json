@@ -1,0 +1,15 @@
+{
+    "Guid": "1838D609-674F-452C-A8B0-9BC3A3FC9B68",
+    "Name": "Windows Dynamic Lighting",
+    "Description": "Adds support for Windows Dynamic Lighting devices",
+    "Author": "Robert",
+    "Website": "",
+    "Repository": "",
+    "Icon": "Resources/logo.png",
+    "Version": "1.0.0.0",
+    "Main": "Artemis.Plugins.Devices.DynamicLighting.dll",
+    "AutoEnableProperties": true,
+    "RequiresAdmin": false,
+    "Platforms": "Windows",
+    "Api": "1.0.0"
+}
