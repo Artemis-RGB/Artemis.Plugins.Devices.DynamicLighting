@@ -6,10 +6,9 @@
     "Website": "",
     "Repository": "",
     "Icon": "Resources/logo.png",
-    "Version": "1.0.0.0",
+    "Version": "1.1.0.0",
     "Main": "Artemis.Plugins.Devices.DynamicLighting.dll",
     "AutoEnableProperties": true,
     "RequiresAdmin": false,
-    "Platforms": "Windows",
-    "Api": "1.0.0"
+    "Platforms": "Windows"
 }

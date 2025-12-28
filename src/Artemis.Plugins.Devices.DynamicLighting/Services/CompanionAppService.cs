@@ -34,9 +34,6 @@ public static class CompanionAppService
             throw new ArtemisPluginException("Companion app is not installed.");
 
         Process.Start(Path.Combine(appPath, "Artemis.DynamicLighting.exe"));
-        
-        // Wait for GetDeviceStatus to succeed
-        
     }
 
     public static void StopCompanionApp()

@@ -8,6 +8,7 @@ using Artemis.Core.Services;
 using Artemis.Plugins.Devices.DynamicLighting.Services;
 using Grpc.Net.Client;
 using Grpc.Net.Client.Configuration;
+using Microsoft.Extensions.Logging.Abstractions;
 using RGB.NET.Core;
 using Serilog;
 using RGBDeviceProvider = RGB.NET.Devices.GRPC.GrpcDeviceProvider;
@@ -32,7 +33,7 @@ public class DynamicLightingDeviceProvider : DeviceProvider
     {
         CompanionAppService.StartCompanionApp();
         
-        var channel = GrpcChannel.ForAddress("http://localhost", new GrpcChannelOptions {HttpHandler = CreateNamedPipeHandler("Artemis.DynamicLighting")});
+        var channel = GrpcChannel.ForAddress("http://localhost", new GrpcChannelOptions {HttpHandler = CreateNamedPipeHandler("Artemis.DynamicLighting"), LoggerFactory = new NullLoggerFactory()});
         RgbDeviceProvider.GrpcChannel = channel;
         RgbDeviceProvider.Exception += RgbDeviceProviderOnException;
 

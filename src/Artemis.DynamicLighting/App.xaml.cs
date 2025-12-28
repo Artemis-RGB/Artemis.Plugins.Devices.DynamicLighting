@@ -1,13 +1,13 @@
 ﻿using System;
 using Windows.Devices.Enumeration;
 using Windows.Devices.Lights;
-using Windows.UI;
 using Microsoft.UI.Xaml;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Artemis.DynamicLighting.Services;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -45,7 +45,7 @@ namespace Artemis.DynamicLighting
             // Add services to the container
             builder.Services.AddSingleton(_deviceManager);
             builder.Services.AddGrpc();
-            builder.Services.AddLogging();
+            builder.Services.AddLogging(loggingBuilder => loggingBuilder.SetMinimumLevel(LogLevel.Warning));
 
             builder.WebHost.ConfigureKestrel(serverOptions =>
             {

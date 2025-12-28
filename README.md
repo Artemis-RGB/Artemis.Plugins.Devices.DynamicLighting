@@ -20,9 +20,9 @@ $cert = New-SelfSignedCertificate -Type Custom -Subject "CN=Artemis RGB" -KeyUsa
 ```
 > Note down the thumbprint.
 
-3. Use SignTool to sign the package with the certificate
+3. Use the script to sign the package with the certificate
 ```powershell
-SignTool sign /a /v /fd SHA256 /f "ArtemisRGB.pfx" /p "artemis-rgb" "Artemis.DynamicLighting.appx"
+.\sign.ps1 -Password artemis-rgb
 ```
 
 4. Add the `.pfx` and signed package to the plugin

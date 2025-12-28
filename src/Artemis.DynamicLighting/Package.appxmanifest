@@ -11,7 +11,7 @@
   <Identity
     Name="98ef48de-4c6a-4aff-8efe-7ed2ffb49512"
     Publisher="CN=Artemis RGB"
-    Version="1.0.0.0" />
+    Version="1.1.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="98ef48de-4c6a-4aff-8efe-7ed2ffb49512" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
